@@ -7,6 +7,27 @@ import {
   TouchableOpacity,
 } from "react-native";
 
+const TAGS = [
+  {
+    tag: "GAMING"
+  },
+  {
+    tag: "TRENDING"
+  },
+  {
+    tag: "JAVASCRIPT"
+  },
+  {
+    tag: "PYTHON"
+  },
+  {
+    tag: "MrWhoseTheBoss"
+  },
+  {
+    tag: "COMEDY"
+  }
+]
+
 const Tags = () => {
   return (
     <ScrollView
@@ -17,21 +38,17 @@ const Tags = () => {
         }
       }
     >
-      <Tag />
-      <Tag />
-      <Tag />
-      <Tag />
-      <Tag />
-      <Tag />
+      {TAGS.map((tags, index) => (
+        <View key={index} style={{
+          marginVertical: 20
+        }}>
+          <Text style={styles.tag}>{tags.tag}</Text>
+        </View>
+      ))}
+
     </ScrollView>
   );
 };
-
-const Tag = () => (
-  <TouchableOpacity style={{ marginVertical: 20 }}>
-    <Text style={styles.tag}>Gaming</Text>
-  </TouchableOpacity>
-);
 
 const styles = StyleSheet.create({
   tag: {
