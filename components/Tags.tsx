@@ -32,8 +32,10 @@ const Tags = () => {
   return (
     <ScrollView
       horizontal
+      showsHorizontalScrollIndicator={false}
       contentContainerStyle={
         {
+
           paddingLeft: 10,
         }
       }
@@ -60,6 +62,7 @@ const styles = StyleSheet.create({
     borderRadius: 20,
     marginRight: 10,
     fontSize: 16,
+    fontWeight: "bold"
     //height: 60,
   },
 });

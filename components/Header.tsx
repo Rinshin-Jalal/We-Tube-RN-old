@@ -13,7 +13,7 @@ const Header = () => {
         style={{
           flexDirection: "row",
           justifyContent: "space-between",
-          width: "20%",
+          width: "23%",
         }}
       >
         <TouchableOpacity>
