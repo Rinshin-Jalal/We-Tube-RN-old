@@ -62,7 +62,8 @@ const styles = StyleSheet.create({
     borderRadius: 20,
     marginRight: 10,
     fontSize: 16,
-    fontWeight: "bold"
+    fontWeight: "bold",
+     marginBottom: 10,
     //height: 60,
   },
 });
