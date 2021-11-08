@@ -34,16 +34,18 @@ const Tags = () => {
       horizontal
       contentContainerStyle={
         {
-          //   padding: 10,
+          paddingLeft: 10,
         }
       }
     >
       {TAGS.map((tags, index) => (
-        <View key={index} style={{
-          marginVertical: 20
+        <TouchableOpacity key={index} style={{
+          // marginVertical: 20
+          marginBottom: 17,
+          marginTop: 5,
         }}>
           <Text style={styles.tag}>{tags.tag}</Text>
-        </View>
+        </TouchableOpacity>
       ))}
 
     </ScrollView>
