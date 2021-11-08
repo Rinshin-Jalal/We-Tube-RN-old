@@ -35,16 +35,18 @@ const Tags = () => {
       showsHorizontalScrollIndicator={false}
       contentContainerStyle={
         {
-
-          paddingLeft: 10,
+          padding: 10,
+          justifyContent: "center",
+          alignItems: "center"
         }
       }
     >
       {TAGS.map((tags, index) => (
         <TouchableOpacity key={index} style={{
-          // marginVertical: 20
-          marginBottom: 17,
-          marginTop: 5,
+          marginVertical: 10,
+          height: 100,
+          justifyContent: "center",
+          alignItems: "center"
         }}>
           <Text style={styles.tag}>{tags.tag}</Text>
         </TouchableOpacity>
