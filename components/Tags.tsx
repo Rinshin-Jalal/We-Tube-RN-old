@@ -32,15 +32,17 @@ const Tags = () => {
   return (
     <ScrollView
       horizontal
+      showsHorizontalScrollIndicator={false}
       contentContainerStyle={
         {
-          //   padding: 10,
+            padding: 10,
+            height: 150
         }
       }
     >
       {TAGS.map((tags, index) => (
         <View key={index} style={{
-          marginVertical: 20
+          marginVertical: 20,
         }}>
           <Text style={styles.tag}>{tags.tag}</Text>
         </View>
@@ -58,6 +60,7 @@ const styles = StyleSheet.create({
     borderRadius: 20,
     marginRight: 10,
     fontSize: 16,
+    fontWeight: "bold"
     //height: 60,
   },
 });

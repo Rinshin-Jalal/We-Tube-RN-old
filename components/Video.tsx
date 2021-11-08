@@ -1,11 +1,23 @@
 import React from "react";
-import { View, Text, Image, TouchableOpacity } from "react-native";
+import { View, Text, Image, TouchableOpacity,  } from "react-native";
 import { Avatar } from "react-native-elements";
 
-const Video = () => {
+interface VideoProps {
+  video: {
+    title: string;
+    thumbnail: string;
+    channel: string;
+    views: string;
+    time: string;
+    profile: string;
+    duration: string;
+  };
+}
+
+const Video: React.FC<VideoProps> = ({ video }) => {
   return (
-    <View style={{ marginBottom: 30, marginTop: 5 }}>
-      <Thumbnail />
+    <View style={{ marginBottom: 30, marginTop: 20, width: "99%", }}>
+      <Thumbnail video={video} />
       <View
         style={{
           flexDirection: "row",
@@ -13,57 +25,59 @@ const Video = () => {
           paddingLeft: 10,
         }}
       >
-        <AvatarImg />
+        <AvatarImg video={video} />
 
         <TouchableOpacity style={{ paddingLeft: 10, marginTop: 10 }}>
-          <Title />
-          <Footer />
+          <Title video={video} />
+          <Footer video={video} />
         </TouchableOpacity>
       </View>
     </View>
   );
 };
 
-const Thumbnail = () => (
+const Thumbnail: React.FC<VideoProps> = ({ video }) => (
   <TouchableOpacity>
     <Image
       source={{
-        uri: "https://i.ytimg.com/vi/DPG77yaqU-k/maxresdefault.jpg",
+        uri: video.thumbnail,
       }}
       style={{
         aspectRatio: 16 / 9,
-        borderRadius: 30,
+        borderRadius: 20,
       }}
     />
   </TouchableOpacity>
 );
-const Title = () => (
+const Title: React.FC<VideoProps> = ({ video }) => (
   <Text
     style={{
       color: "white",
-      fontSize: 22,
+      fontSize: 15,
       //   padding: 10,
     }}
   >
-    Me at the zoo
+    {video.title}
   </Text>
 );
 
 // ok
 
-const Footer = () => (
+const Footer: React.FC<VideoProps> = ({ video }) => (
   <View>
     <Text style={{ color: "gray", fontSize: 15 }}>
-      Zoo Boi &#xb7; 10M views &#xb7; 100 Years Ago
+      {video.channel} &#xb7; {video.views} views &#xb7; {video.time} days ago
     </Text>
   </View>
 );
 
-const AvatarImg = () => (
+const AvatarImg: React.FC<VideoProps> = ({ video }) => (
   <Avatar
-    size="medium"
+    size="small"
     rounded
-    title="ZB"
+    source={{
+      uri: video.profile
+    }}
     onPress={() => console.log("Works!")}
     activeOpacity={0.5}
     overlayContainerStyle={{ backgroundColor: "#79a5f2" }}
