@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text, Image, TouchableOpacity,  } from "react-native";
+import { View, Text, Image, TouchableOpacity } from "react-native";
 import { Avatar } from "react-native-elements";
 
 interface VideoProps {
@@ -16,7 +16,7 @@ interface VideoProps {
 
 const Video: React.FC<VideoProps> = ({ video }) => {
   return (
-    <View style={{ marginBottom: 30, marginTop: 20, width: "99%", }}>
+    <View style={{ marginBottom: 10, marginTop: 20, width: "99%" }}>
       <Thumbnail video={video} />
       <View
         style={{
@@ -54,14 +54,11 @@ const Title: React.FC<VideoProps> = ({ video }) => (
     style={{
       color: "white",
       fontSize: 15,
-      //   padding: 10,
     }}
   >
     {video.title}
   </Text>
 );
-
-// ok
 
 const Footer: React.FC<VideoProps> = ({ video }) => (
   <View>
@@ -76,7 +73,7 @@ const AvatarImg: React.FC<VideoProps> = ({ video }) => (
     size="small"
     rounded
     source={{
-      uri: video.profile
+      uri: video.profile,
     }}
     onPress={() => console.log("Works!")}
     activeOpacity={0.5}

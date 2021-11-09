@@ -1,3 +1,4 @@
 # WeTube
 Youtube Clone with React-Native and Django
-![Screenshot_1636218679](https://user-images.githubusercontent.com/88965873/140618362-5c52f7fa-c3ed-4616-b0ab-9ced16434c0a.png)
+
+![Screenshot_1636218679](https://cdn.discordapp.com/attachments/902041888822005811/907579966001127464/unknown.png)

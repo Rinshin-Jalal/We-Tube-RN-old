@@ -43,7 +43,7 @@ export default Header;
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: "#0f0f0f",
+    backgroundColor: "#202225",
     paddingTop: 27,
     flexDirection: "row",
     justifyContent: "space-between",
