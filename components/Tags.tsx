@@ -25,6 +25,7 @@ const Tags = () => {
   const [activeTag, setActiveTag] = React.useState("New");
 
   return (
+
     <View>
       <ScrollView horizontal contentContainerStyle={{ padding: 10 }}>
         {TAGS.map((tag, index) => (
@@ -82,68 +83,3 @@ const styles = StyleSheet.create({
 });
 
 export default Tags;
-
-// import React from "react";
-// import {
-//   StyleSheet,
-//   Text,
-//   View,
-//   ScrollView,
-//   TouchableOpacity,
-// } from "react-native";
-
-// const TAGS = [
-//   {
-//     tag: "GAMING",
-//   },
-//   {
-//     tag: "TRENDING",
-//   },
-//   {
-//     tag: "JAVASCRIPT",
-//   },
-//   {
-//     tag: "PYTHON",
-//   },
-//   {
-//     tag: "MrWhoseTheBoss",
-//   },
-//   {
-//     tag: "COMEDY",
-//   },
-// ];
-
-// const Tags = () => {
-//   return (
-//     <ScrollView
-//       horizontal
-//       showsHorizontalScrollIndicator={false}
-//       contentContainerStyle={{
-//         paddingLeft: 10,
-//         paddingVertical: 20,
-//       }}
-//     >
-//       {TAGS.map((tags, index) => (
-//         <TouchableOpacity key={index}>
-//           <Text style={styles.tag}>{tags.tag}</Text>
-//         </TouchableOpacity>
-//       ))}
-//     </ScrollView>
-//   );
-// };
-
-// const styles = StyleSheet.create({
-//   tag: {
-//     padding: 5,
-//     backgroundColor: `#fff`,
-//     color: `#000`,
-//     borderRadius: 20,
-//     marginRight: 10,
-//     fontSize: 12,
-//     fontWeight: "bold",
-//     // marginBottom: 10,
-//     //height: 60,
-//   },
-// });
-
-// export default Tags;
