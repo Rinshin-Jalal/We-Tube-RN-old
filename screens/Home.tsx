@@ -52,12 +52,12 @@ const Home = () => {
       <Divider width={1.5} orientation="horizontal" color="#555" />
       <ScrollView>
         {VIDEOS.map((video, index) => (
-            <View key={index}>
-              <Video video={video} />
-            </View>
+          <View key={index}>
+            <Video video={video} />
+          </View>
         ))}
       </ScrollView>
-        
+
       <Divider width={1.5} orientation="horizontal" color="#555" />
       <Footer />
     </View>
